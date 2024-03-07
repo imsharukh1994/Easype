@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top navigation bar -->
+    <LinearLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"> <!-- Set background color to black for top navigation bar -->
+
+        <!-- Navigation items -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_notifications_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription,DuplicateIds" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_search_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription,DuplicateIds" />
+
+        <!-- Spacer to push the profile icon to the right -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_person_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <!-- FrameLayout to hold the main content -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavBar"
+        android:layout_below="@id/topNavBar"
+        android:background="@color/white"> <!-- Set background color to white for main content -->
+
+        <!-- Your main content goes here -->
+
+    </FrameLayout>
+
+    <!-- Bottom navigation bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/black"> <!-- Set background color to black for bottom navigation bar -->
+
+        <!-- Navigation items -->
+        <ImageButton
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/nav_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_store_24"
+            android:background="@null"
+            android:padding="16dp"/>
+
+        <ImageButton
+            android:id="@+id/nav_notifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_privacy_tip_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_account_balance_wallet_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_access_time_24"
+            android:background="@null"
+            android:padding="16dp"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</RelativeLayout>
